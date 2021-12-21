@@ -12,10 +12,8 @@ export default new Router()
 
   // PLP pages
   .match('/new/:path*', shoppingFlowRouteHandler)
-
+  .get('/dw/image/v2/:path*', shoppingFlowRouteHandler)
   // PDP pages
-
-
 
   // example route for cacheable assets:
   .match('/images/:path*', ({ cache, proxy }) => {

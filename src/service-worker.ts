@@ -9,6 +9,18 @@ new Prefetcher({
   plugins: [
     new DeepFetchPlugin([
       {
+        selector: 'product-tile-image position-relative ls-is-cached lazyloaded', // CSS selector syntax - just like you would use with document.querySelector()
+        maxMatches: 1, // limits the number of matched elements to prefetch to 1 per page
+        attribute: 'src', // the attribute holding the URL to prefetching
+        as: 'image', // the type of asset being prefetched
+      },
+      {
+        selector: 'nav-custom-image', // CSS selector syntax - just like you would use with document.querySelector()
+        maxMatches: 1, // limits the number of matched elements to prefetch to 1 per page
+        attribute: 'src', // the attribute holding the URL to prefetching
+        as: 'image', // the type of asset being prefetched
+      },
+      {
         selector: '.component-image.position-absolute.promotion-impression-img',
         maxMatches: 1,
         attribute: 'src',
